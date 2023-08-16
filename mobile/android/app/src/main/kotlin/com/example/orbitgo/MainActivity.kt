@@ -1,4 +1,4 @@
-package com.example.client
+package com.example.orbitgo
 
 import io.flutter.embedding.android.FlutterActivity
 

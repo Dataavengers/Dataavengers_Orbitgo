@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.client">
+    package="com.example.orbitgo">
    <application
-        android:label="client"
+        android:label="orbitgo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
