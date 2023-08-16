@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import satelliteApproachingEarthImg from "../assets/satellite-approaching-earth.png";
 // import homeIndicatorImg from "../assets/home-indicator.png";
 
-import TextField, { TextFieldPassword } from '../components/TextField';
+import TextField from '../components/atoms/TextField';
+import PasswordField from '../components/atoms/PasswordField';
 
 const Login = () => {
 
@@ -45,7 +46,7 @@ const Login = () => {
                         />
 
                         {/* Password text field */}
-                        <TextFieldPassword
+                        <PasswordField
                             lable={"Password"}
                             placeholder={"Please enter your password"}
                             value={password}
