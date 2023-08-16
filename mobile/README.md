@@ -1,6 +1,6 @@
-# client
+# orbitgo
 
-A new Flutter project.
+Endless Travel.
 
 ## Getting Started
 
