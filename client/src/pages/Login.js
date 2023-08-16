@@ -4,6 +4,8 @@ import satelliteApproachingEarthImg from "../assets/satellite-approaching-earth.
 
 import TextField from '../components/atoms/TextField';
 import PasswordField from '../components/atoms/PasswordField';
+import { Link } from 'react-router-dom';
+import Button from '../components/atoms/Button';
 
 const Login = () => {
 
@@ -11,21 +13,17 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
-    const onClickRegisterBtn = () => {
-        
-    } 
-
     const onClickLoginBtn = () => {
         
     } 
 
     return (
         <>
-            <div >
+            <div>
                 <img className="max-h-screen w-full object-cover" src={satelliteApproachingEarthImg} alt="satellite-approaching-earth" />
             
                 <form 
-                    className=' sm:absolute sm:top-1/2 sm:left-1/2 xs:transform sm:-translate-x-1/2 sm:-translate-y-1/2 
+                    className=' sm:absolute sm:top-1/2 sm:left-1/2 xs:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-fit
                     h-[67%] w-[95%] sm:w-[360px] top-[33%] left-[2.5%] absolute top-3/10 left-5/100 bg-black bg-opacity-75 rounded-lg border-none p-6'
                 >
                     <div className="border-none h-full">
@@ -60,21 +58,17 @@ const Login = () => {
                         {/* Register Btn */}
                         <div className='text-[#9CCDDC] font-inter font-medium text-xs leading-5 tracking-tighter flex pt-2' >
                             <div className='flex-1'></div>
-                            <button className='btn bg-transparent' onClick={onClickRegisterBtn} >
+                            <Link to="/register" className='btn bg-transparent'>
                                 Register
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Login btn*/}
                         <div className='flex'>
-                            <button 
-                                className='inline-flex justify-center items-center space-x-4 rounded-full bg-[#5591A9] w-full py-2 mx-0 my-5' 
-                                onClick={onClickLoginBtn} 
-                            >
-                                <div className='text-white font-inter font-semibold text-lg leading-7 tracking-tight'>
-                                    LOGIN
-                                </div>
-                            </button>
+                            <Button
+                                btnName={"LOGIN"}
+                                onClickButton={onClickLoginBtn}
+                            />
                         </div>
                     </div>
 
