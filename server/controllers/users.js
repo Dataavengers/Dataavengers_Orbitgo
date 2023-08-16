@@ -5,11 +5,10 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 let loginId;
-let userName;
-const createUser = async (req, res, next) => {
+export const createUser = async (req, res, next) => {
     let existingUser;
     try{
-        existingUser = await db.findOne({email: req.body.email});
+        existingUser = await db.findOne({username: req.body.username});
     }catch (err) {
         console.log({message: err.message});
     }
@@ -19,27 +18,26 @@ const createUser = async (req, res, next) => {
         console.log("user allready exist!");
     }else{
         try{
-            const {user_id, email, phone, address, firstname, lastname, faculty, password, confirm_password, profile} = req.body;
-            if(password == confirm_password){
-                const hashedPassword = bcrypt.hashSync(password);
-                const newUser = new db({
-                    user_id,
-                    email,
-                    phone,
-                    address,
-                    firstname,
-                    lastname,
-                    faculty,
-                    profile,
-                    password: hashedPassword
-                });
-
-                await newUser.save();
-                res.status(201).json({message: "successfully register!"});
-                console.log("successfully register!");
+            const {name, username, password, confirm_password} = req.body;
+            if(name && username && password && confirm_password){
+                if(password == confirm_password){
+                    const hashedPassword = bcrypt.hashSync(password);
+                    const newUser = new db({
+                        name,
+                        username,
+                        password: hashedPassword
+                    });
+    
+                    await newUser.save();
+                    res.status(201).json({message: "user successfully registered!"});
+                    console.log("user successfully registered!");
+                }else{
+                    res.send({message: "password did't match!"});
+                    console.log("password did't match!");
+                }
             }else{
-                res.send({message: "password did't match!"});
-                console.log("password did't match!");
+                res.send({message: "all field should be filled!"});
+                console.log("all field should be filled!");
             }
         }catch (error) {
             res.status(409).json({message: err.message});
@@ -48,12 +46,12 @@ const createUser = async (req, res, next) => {
     }
 }
 
-const loginUser = async (req, res, next) => {
+export const loginUser = async (req, res, next) => {
     let existingUser;
-    const {email, password} = req.body;
+    const {username, password} = req.body;
 
     try{
-        existingUser = await db.findOne({email: email});
+        existingUser = await db.findOne({username: username});
     }catch(err) {
         res.send({message: err.message});
     }
@@ -73,9 +71,8 @@ const loginUser = async (req, res, next) => {
                     httpOnly: true,
                     sameSite: 'lax'
                 });
-                res.send({message: "user sccessfully login!", user: existingUser.firstname + " " + existingUser.lastname, token});
+                res.send({message: "user sccessfully login!", user: existingUser.name, token});
                 loginId = existingUser._id.toString();
-                userName = existingUser.user_id;
                 console.log("user sccessfully login!");
             }else{
                 res.send({message: "incorrect password"});
@@ -91,14 +88,14 @@ const loginUser = async (req, res, next) => {
     }
 }
 
-const verifyToken = (req, res, next) => {
+export const verifyToken = (req, res, next) => {
     let token = "";
     let cookies = req.headers.cookie;
     if(cookies){
         token = cookies.split("=")[1];
     }
     if(!token){
-        res.send({message: "Please Login!"});
+        res.send({message: "you already loggedout!"});
     }else{
         jwt.verify(String(token), process.env.secret_key, (err, user) => {
             if(err){
@@ -111,7 +108,7 @@ const verifyToken = (req, res, next) => {
     }
 }
 
-const refreshToken = (req, res, next) => {
+export const refreshToken = (req, res, next) => {
     const cookies = req.headers.cookie;
     const prevToken = cookies.split("=")[1];
     if(!prevToken){
@@ -138,7 +135,7 @@ const refreshToken = (req, res, next) => {
     }
 }
 
-const logout = (req, res, next) => {
+export const logout = (req, res, next) => {
     const cookies = req.headers.cookie;
     const prevToken = cookies.split("=")[1];
 
@@ -151,9 +148,7 @@ const logout = (req, res, next) => {
         }else{
             res.clearCookie(`${user.id}`);
             req.cookies[`${user.id}`] = "";
-            return res.status(200).json({message: "successfully logged out"});
+            return res.status(200).json({message: "user successfully logged out"});
         }
     });
 }
-
-module.exports = { createUser, loginUser, verifyToken, refreshToken, logout };
