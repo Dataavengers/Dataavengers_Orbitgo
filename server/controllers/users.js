@@ -289,10 +289,10 @@ export const searchPlanets = async (req, res, next) => {
 }
 
 export const verifyEntryPass = async (req, res, next) => {
-    const { scannedBarcode } = req.body;
+    const { barcode } = req.body;
 
     try {
-        const entry = await travels.findOne({ barcode: scannedBarcode });
+        const entry = await travels.findOne({ barcode: barcode });
 
         if (entry) {
             return res.send({ message: 'valid trip pass!' });
