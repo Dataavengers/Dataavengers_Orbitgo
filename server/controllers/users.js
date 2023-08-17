@@ -94,6 +94,38 @@ export const loginUser = async (req, res, next) => {
     }
 }
 
+export const getProfile = (req, res, next) => {
+
+}
+
+export const updateProfile = (req, res, next) => {
+
+}
+
+export const getTrips = (req, res, next) => {
+
+}
+
+export const getPlanets = (req, res, next) => {
+
+}
+
+export const tripRequest = (req, res, next) => {
+
+}
+
+export const getPackages = (req, res, next) => {
+
+}
+
+export const searchPlanets = (req, res, next) => {
+
+}
+
+export const verifyEntryPass = (req, res, next) => {
+
+}
+
 export const verifyToken = (req, res, next) => {
     let token = "";
     let cookies = req.headers.cookie;
