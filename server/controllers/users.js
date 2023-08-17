@@ -57,31 +57,37 @@ export const loginUser = async (req, res, next) => {
     }
 
     try {
-        if(existingUser){
-            let isPasswordCorrect = bcrypt.compareSync(password, existingUser.password);
-            if(isPasswordCorrect){
-                const token = jwt.sign({id: existingUser._id}, process.env.secret_key, {expiresIn: process.env.expiresIn});
-                console.log("Generated token\n", token);
-                if(req.cookies[`${existingUser._id}`]){
-                    req.cookies[`${existingUser._id}`] = "";
+        if(username && password){
+            if(existingUser){
+                let isPasswordCorrect = bcrypt.compareSync(password, existingUser.password);
+                if(isPasswordCorrect){
+                    const token = jwt.sign({id: existingUser._id}, process.env.secret_key, {expiresIn: process.env.expiresIn});
+                    console.log("Generated token\n", token);
+                    if(req.cookies[`${existingUser._id}`]){
+                        req.cookies[`${existingUser._id}`] = "";
+                    }
+                    res.cookie(String(existingUser._id), token, {
+                        path: '/',
+                        expires: new Date(Date.now() + 1000 * process.env.expires),
+                        httpOnly: true,
+                        sameSite: 'lax'
+                    });
+                    res.send({message: "user sccessfully login!", user: existingUser.name, token});
+                    loginId = existingUser._id.toString();
+                    console.log("user sccessfully login!");
+                }else{
+                    res.send({message: "incorrect password"});
+                    console.log("incorrect password!");
                 }
-                res.cookie(String(existingUser._id), token, {
-                    path: '/',
-                    expires: new Date(Date.now() + 1000 * process.env.expires),
-                    httpOnly: true,
-                    sameSite: 'lax'
-                });
-                res.send({message: "user sccessfully login!", user: existingUser.name, token});
-                loginId = existingUser._id.toString();
-                console.log("user sccessfully login!");
             }else{
-                res.send({message: "incorrect password"});
-                console.log("incorrect password!");
+                res.send({message: "user doesn't exist!"});
+                console.log("user doesn't exist!");
             }
         }else{
-            res.send({message: "user doesn't exist!"});
-            console.log("user doesn't exist!");
+            res.send({message: "all field should be filled!"});
+            console.log("all field should be filled!");
         }
+        
     } catch (err) {
         res.send({message: err.message});
         console.log(err.message);
@@ -95,7 +101,7 @@ export const verifyToken = (req, res, next) => {
         token = cookies.split("=")[1];
     }
     if(!token){
-        res.send({message: "you already loggedout!"});
+        res.send({message: "you are already loggedout!"});
     }else{
         jwt.verify(String(token), process.env.secret_key, (err, user) => {
             if(err){
