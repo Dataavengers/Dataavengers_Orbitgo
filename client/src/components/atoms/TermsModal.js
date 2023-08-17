@@ -8,11 +8,16 @@ const TermsModal = ({visible, onClose}) => {
     const handleOnClose = (e) => {
         if(e.target.id === 'container') onClose();
     }
+    
+    const onClickAccepted = () => {
+        // 
+        onClose();
+    }
 
     return (
         <>
             <div id="container"  class="fixed inset-0  h-screen flex justify-center items-end sm:items-center" onClick={handleOnClose}>
-                <div className='p-2 w-full h-[80%] rounded-t-lg rounded-b-0 bg-[#06141A] flex flex-col justify-between sm:w-[360px] sm:h-[90%] sm:rounded-lg'>
+                <div className={`p-2 w-full h-[80%] rounded-t-lg rounded-b-0 bg-[#06141A] flex flex-col justify-between sm:w-[360px] sm:h-[90%] sm:rounded-lg`}>
                     <div className='h-[4rem]'></div>
                     <div className='text-white font-inter text-[0.85rem] font-normal leading-[1.25rem] tracking-[0.0175rem] h-[90%] px-6 text-left overflow-y-auto flex flex-col space-x-0 space-y-4'>
                         
@@ -49,7 +54,7 @@ const TermsModal = ({visible, onClose}) => {
                     <div className='h-[6rem] px-6'>
                         <Button 
                             btnName={"Accept"}
-                            onClickButton={()=>{}}
+                            onClickButton={onClickAccepted}
                         />
                     </div>
                 </div>

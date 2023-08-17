@@ -33,8 +33,8 @@ const Register = () => {
                 <img className="h-screen w-full object-cover" src={satelliteApproachingEarthImg} alt="satellite-approaching-earth" />
             
                 <form 
-                    className=' sm:absolute sm:top-1/2 sm:left-1/2 xs:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-fit 
-                    h-[90%] w-[95%] sm:w-[360px] top-[10%] left-[2.5%] absolute top-3/10 left-5/100 bg-black bg-opacity-75 rounded-lg border-none p-6'
+                    className=' absolute sm:top-1/2 sm:left-1/2 xs:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-fit 
+                    h-[90%] w-[95%] sm:w-[360px] top-[10%] left-[2.5%] top-3/10 left-5/100 bg-black bg-opacity-75 rounded-lg border-none p-6'
                 >
                     <div className="border-none h-full">
 

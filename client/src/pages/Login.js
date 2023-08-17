@@ -29,7 +29,7 @@ const Login = () => {
                     <div className="border-none h-full">
 
                         {/* Title txt */}
-                        <div className='mb-4 text-white font-inter font-semibold text-3xl tracking-tighter text-center mb-7'>
+                        <div className='text-white font-inter font-semibold text-3xl tracking-tighter text-center mb-7'>
                             ORBITGO
                         </div>
                         
