@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "0671f40b-c0cc-4bc6-a96d-104fa5beaeed",
+		"name": "hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17670906"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sarujan P\",\r\n    \"username\": \"sarujan\",\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sarujan\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sarujan P\",\r\n    \"username\": \"sarujan\",\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/profile/63c64ec809fce2957067c0dc"
+			},
+			"response": []
+		},
+		{
+			"name": "trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/trips"
+			},
+			"response": []
+		},
+		{
+			"name": "planets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/planets"
+			},
+			"response": []
+		},
+		{
+			"name": "packages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/packages"
+			},
+			"response": []
+		},
+		{
+			"name": "request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"63c64ec809fce2957067c0dc\",\r\n    \"start_point\": \"Earth\",\r\n    \"end_point\": \"Mass\",\r\n    \"date\": \"2023.10.05\",\r\n    \"no_of_travellers\": \"05\",\r\n    \"package_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/request"
+			},
+			"response": []
+		},
+		{
+			"name": "verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"barcode\": \"63c64ec809fce2957067c0dc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/verify"
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": \"Earth\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/search"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/logout"
+			},
+			"response": []
+		}
+	]
+}
