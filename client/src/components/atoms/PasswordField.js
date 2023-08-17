@@ -22,7 +22,7 @@ const PasswordField = ({lable, placeholder, value, setValue, isPasswordHidden, s
                 placeholder={placeholder} 
                 onChange={handleChange}
                 value={value}
-                />
+            />
             <button className='pointer absolute inset-y-0 right-0 top-5 pr-4 flex items-center text-sm leading-5' onClick={(e)=>{e.preventDefault(); setIsPasswordHidden(!isPasswordHidden)}}>
                 { isPasswordHidden 
                     ? <ClosedEyeIcon />

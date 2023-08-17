@@ -4,8 +4,10 @@ import TextField from '../components/atoms/TextField';
 import PasswordField from '../components/atoms/PasswordField';
 import TermsModal from '../components/atoms/TermsModal';
 import Button from '../components/atoms/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [userName, setUserName] = useState('');
@@ -16,13 +18,15 @@ const Register = () => {
     const [isComfirmPasswordHidden, setIsComfirmPasswordHidden] = useState(true);
     const [showTermsModal,setShowTermsModal] = useState(false);
     
+
+
     const onClickShowButton = (e) => {
         e.preventDefault();
         setShowTermsModal(!showTermsModal);
     }
 
     const onClickRegisterBtn = () => {
-        
+        navigate('/dashboard');
     }
 
     const handleOnCloseTermsModal = () => setShowTermsModal(false);
