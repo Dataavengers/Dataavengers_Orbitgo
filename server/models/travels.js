@@ -30,7 +30,7 @@ const travelSchema = new Schema({
     },
     barcode: {
         type: String,
-        required: true,
+        default: null,
     },
 });
 
