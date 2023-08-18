@@ -2,7 +2,7 @@ import React from 'react';
 
 const BottomNavBarItem = ({item, name}) => {
     return (
-        <div className='flex flex-col justify-center items-center' >
+        <div className='flex flex-col justify-center items-center cursor-pointer' >
             <div className='' >
                 {item}
             </div>
