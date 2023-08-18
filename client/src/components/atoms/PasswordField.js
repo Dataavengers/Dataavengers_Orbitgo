@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClosedEyeIcon } from '../../assets/Icons';
+import { ClosedEyeIcon, OpenEyeIcon } from '../../assets/Icons';
 
 const PasswordField = ({lable, placeholder, value, setValue, isPasswordHidden, setIsPasswordHidden, isError, errorMsg}) => {
     const handleChange = event => {
@@ -22,11 +22,11 @@ const PasswordField = ({lable, placeholder, value, setValue, isPasswordHidden, s
                 placeholder={placeholder} 
                 onChange={handleChange}
                 value={value}
-                />
-            <button className='pointer absolute inset-y-0 right-0 top-5 pr-4 flex items-center text-sm leading-5' onClick={()=>{setIsPasswordHidden(!isPasswordHidden)}}>
+            />
+            <button className='pointer absolute inset-y-0 right-0 top-5 pr-4 flex items-center text-sm leading-5' onClick={(e)=>{e.preventDefault(); setIsPasswordHidden(!isPasswordHidden)}}>
                 { isPasswordHidden 
                     ? <ClosedEyeIcon />
-                    : <></>
+                    : <OpenEyeIcon />
                 }
             </button>
             </div>

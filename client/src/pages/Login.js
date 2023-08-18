@@ -4,7 +4,7 @@ import satelliteApproachingEarthImg from "../assets/satellite-approaching-earth.
 
 import TextField from '../components/atoms/TextField';
 import PasswordField from '../components/atoms/PasswordField';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../components/atoms/Button';
 
 const Login = () => {
@@ -13,8 +13,11 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
+    const navigate = useNavigate();
+
+
     const onClickLoginBtn = () => {
-        
+        navigate('/dashboard');
     } 
 
     return (
@@ -29,7 +32,7 @@ const Login = () => {
                     <div className="border-none h-full">
 
                         {/* Title txt */}
-                        <div className='mb-4 text-white font-inter font-semibold text-3xl tracking-tighter text-center mb-7'>
+                        <div className='text-white font-inter font-semibold text-3xl tracking-tighter text-center mb-7'>
                             ORBITGO
                         </div>
                         
