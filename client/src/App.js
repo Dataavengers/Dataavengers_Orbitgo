@@ -14,6 +14,7 @@ import Activity from './pages/Activity';
 import Booking from './pages/Booking';
 import StartBooking from './pages/StartBooking'
 import Info from './pages/Info';
+import BoardingPass from './pages/BoardingPass';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/booking" element={<Booking />} />
           <Route path="/startbooking" element={<StartBooking />} />
           <Route path="/info" element={<Info />} />
+          <Route path="/boardingpass" element={<BoardingPass />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>
