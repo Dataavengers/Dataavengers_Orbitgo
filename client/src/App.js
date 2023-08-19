@@ -10,8 +10,9 @@ import UpdateUsername from './pages/UpdateUsername';
 import UpdateName from './pages/UpdateName';
 import UpdatePassword from './pages/UpdatePassword';
 import Discover from './pages/Discover';
-import Booking from './pages/Booking';
 import Activity from './pages/Activity';
+import Booking from './pages/Booking';
+import StartBooking from './pages/StartBooking'
 
 const App = () => {
   return (
@@ -28,8 +29,9 @@ const App = () => {
           <Route path="/updatename" element={<UpdateName />} />
           <Route path="/updatepass" element={<UpdatePassword />} />
           <Route path="/discover" element={<Discover />} />
-          <Route path="/booking" element={<Booking />} />
           <Route path="/activity" element={<Activity />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/startbooking" element={<StartBooking />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>

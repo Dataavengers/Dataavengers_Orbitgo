@@ -1,6 +1,5 @@
 import React from 'react';
 import BottomNavBar from '../components/molecules/BottomNavBar';
-// import Button from '../components/atoms/Button';
 
 
 const Activity = () => {
