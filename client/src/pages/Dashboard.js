@@ -1,7 +1,7 @@
 import React from 'react';
 import BottomNavBar from '../components/molecules/BottomNavBar';
 import Button from '../components/atoms/Button';
-import worldImage from '../assets/world-img.png';
+import worldImage from '../assets/img/world-img.png';
 import { BackIcon, LocationPinIcon } from '../assets/Icons';
 
 const Dashboard = () => {

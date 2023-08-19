@@ -1,7 +1,6 @@
 import React from 'react';
-import satelliteApproachingEarthImg from "../assets/satellite-approaching-earth.png";
+import satelliteApproachingEarthImg from "../assets/img/satellite-approaching-earth.png"
 import { useNavigate } from 'react-router-dom';
-
 
 const Home = () => {
 
@@ -11,11 +10,11 @@ const Home = () => {
         <div className='' >
             <img className="h-screen w-full object-cover" src={satelliteApproachingEarthImg} alt="satellite-approaching-earth" />
             <div className='absolute bottom-[20%] left-0 w-full h-full border-none p-6' onClick={() => {navigate('/login')}} >
-                <div className='text-white flex flex-col justify-end items-left h-full w-full space-y-3'>
+                <div className='text-white flex flex-col justify-end items-left h-full w-full space-y-3 pl-20 pb-10'>
                     <h1 className='font-inter text-[3.75rem] font-bold leading-[3.75rem] tracking-[0.075rem]'>
                         Go beyond
                     </h1>
-                    <div className='flex space-x-3' >
+                    <div className='flex space-x-3 pl-2' >
                         <h2 className='text-efeff7 font-inter text-[1.5rem] font-bold leading-[3.75rem] tracking-[0.03rem]' >
                             with
                         </h2>
