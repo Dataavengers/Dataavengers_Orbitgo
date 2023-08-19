@@ -14,10 +14,12 @@ const BottomNavBar = () => {
                 />
             </Link>
 
-            <BottomNavBarItem
-                name={'Activity'}
-                item={<ClockIcon />}
-            />
+            <Link to="/activity">
+                <BottomNavBarItem
+                    name={'Activity'}
+                    item={<ClockIcon />}
+                />
+            </Link>
 
             <Link to="/discover">
                 <BottomNavBarItem

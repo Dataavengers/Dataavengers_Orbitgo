@@ -11,6 +11,7 @@ import UpdateName from './pages/UpdateName';
 import UpdatePassword from './pages/UpdatePassword';
 import Discover from './pages/Discover';
 import Booking from './pages/Booking';
+import Activity from './pages/Activity';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/updatepass" element={<UpdatePassword />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/activity" element={<Activity />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>
