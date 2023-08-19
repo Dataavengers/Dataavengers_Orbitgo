@@ -1,5 +1,5 @@
 import React from 'react';
-import satelliteApproachingEarthImg from "../assets/img/satellite-approaching-earth.png"
+import satelliteApproachingEarthImg from "../assets/img/dash.jpg"
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {

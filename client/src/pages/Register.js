@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import satelliteApproachingEarthImg from "../assets/img/satellite-approaching-earth.png";
+import satelliteApproachingEarthImg from "../assets/img/dash.jpg";
 import TextField from '../components/atoms/TextField';
 import PasswordField from '../components/atoms/PasswordField';
 import TermsModal from '../components/atoms/TermsModal';

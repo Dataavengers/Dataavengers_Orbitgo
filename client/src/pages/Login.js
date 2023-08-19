@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import satelliteApproachingEarthImg from "../assets/img/satellite-approaching-earth.png";
+import satelliteApproachingEarthImg from "../assets/img/dash.jpg";
 // import homeIndicatorImg from "../assets/home-indicator.png";
 
 import TextField from '../components/atoms/TextField';
@@ -18,14 +18,14 @@ const Login = () => {
 
     const onClickLoginBtn = () => {
         navigate('/dashboard');
-    } 
+    }
 
     return (
         <>
             <div>
                 <img className="max-h-screen w-full object-cover" src={satelliteApproachingEarthImg} alt="satellite-approaching-earth" />
-            
-                <form 
+
+                <form
                     className=' sm:absolute sm:top-1/2 sm:left-1/2 xs:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:h-fit
                     h-[67%] w-[95%] sm:w-[360px] top-[33%] left-[2.5%] absolute top-3/10 left-5/100 bg-black bg-opacity-75 rounded-lg border-none p-6'
                 >
@@ -35,7 +35,7 @@ const Login = () => {
                         <div className='text-white font-inter font-semibold text-3xl tracking-tighter text-center mb-7'>
                             ORBITGO
                         </div>
-                        
+
                         {/* UserName text field */}
                         <TextField
                             lable={"Username"}
@@ -57,7 +57,7 @@ const Login = () => {
                             isError={false}
                             errorMsg={""}
                         />
-                        
+
                         {/* Register Btn */}
                         <div className='text-[#9CCDDC] font-inter font-medium text-xs leading-5 tracking-tighter flex pt-2' >
                             <div className='flex-1'></div>
