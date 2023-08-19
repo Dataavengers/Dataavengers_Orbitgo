@@ -13,6 +13,7 @@ import Discover from './pages/Discover';
 import Activity from './pages/Activity';
 import Booking from './pages/Booking';
 import StartBooking from './pages/StartBooking'
+import Info from './pages/Info';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/activity" element={<Activity />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/startbooking" element={<StartBooking />} />
+          <Route path="/info" element={<Info />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>

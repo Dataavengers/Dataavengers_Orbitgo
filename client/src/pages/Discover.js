@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import BottomNavBar from '../components/molecules/BottomNavBar';
-import Button from '../components/atoms/Button';
 import TextField from '../components/atoms/TextField';
 import { SearchIcon } from '../assets/Icons';
 
