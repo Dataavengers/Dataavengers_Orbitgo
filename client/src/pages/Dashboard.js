@@ -16,27 +16,25 @@ const Dashboard = () => {
 
     return (
         <div className='h-screen w-full flex flex-col justify-between py-5 px-7 bg-gradient-to-b from-[#011118] to-[#133F52]' >
-            <div className='flex flex-col justify-between h-full w-full p-3' >
-                <div className='text-white font-inter text-[1.25rem] font-bold text-left' >
+            <div className='flex flex-col justify-between place-items-center h-full w-full p-3' >
+                <div className='text-white font-inter text-3xl font-bold text-left' >
                     WELCOME BACK!!!
                 </div>
                 <div className='w-full text-white flex flex-col justify-center items-center ' >
-                    <div
-                        className='flex absolute top-[21%] left-[50%]'
-                    >
+                    <div className='flex absolute top-[21%] left-[50%]'>
                         <div className='' >
                             <LocationPinIcon />
                         </div>
-                        <div className='text-white font-inter text-[0.75rem] font-medium' >You are here!</div>
+                        <div className='text-black font-inter text-sm font-medium' >You are here!</div>
                     </div>
                     <img className='w-96' src={worldImage} alt='world-img' />
-                    <div className='flex justify-end w-full pt-5'>
+                    <div className='flex justify-end w-1/3 pt-5 '>
                         <button onClick={onClickTurnBackButton} >
                             <BackIcon />
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className='w-1/6 mb-11'>
                     <Button
                         btnName={'LETS GO!'}
                         onClickButton={onClickLetsGoButton}

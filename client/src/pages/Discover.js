@@ -23,7 +23,7 @@ const Discover = () => {
                         />
                     </div>
 
-                    <button className='w-fit  m-2 mb-5 inline-flex justify-center items-center space-x-4 rounded-full bg-[#5591A9]' >
+                    <button className='w-fit mb-3 mx-5 inline-flex justify-center items-center space-x-4 rounded-full bg-[#5591A9]' >
                         <SearchIcon />
                     </button>
                 </div>
