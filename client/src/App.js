@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import NoMatch from './pages/NoMatch';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>

@@ -1,30 +1,37 @@
 import React from 'react';
 import { ClockIcon, HomeIcon, SearchIcon, UserProfileIcon } from '../../assets/Icons';
 import BottomNavBarItem from '../atoms/BottomNavBarItem';
+import { Link } from 'react-router-dom';
 
 const BottomNavBar = () => {
+
     return (
         <div className='bg-transparent flex justify-between my-0 h-fit w-auto mb-1' >
-            <BottomNavBarItem 
-                name={'Home'}
-                item={<HomeIcon />}
-            />
+            <Link to="/dashboard">
+                <BottomNavBarItem
+                    name={'Home'}
+                    item={<HomeIcon />}
+                />
+            </Link>
 
-            <BottomNavBarItem 
+            <BottomNavBarItem
                 name={'Activity'}
                 item={<ClockIcon />}
             />
 
-            <BottomNavBarItem 
+            <BottomNavBarItem
                 name={'Discover'}
                 item={<SearchIcon />}
             />
 
-            <BottomNavBarItem 
-                name={'Profile'}
-                item={<UserProfileIcon />}
-            />
-        </div>
+            <Link to="/profile">
+                <BottomNavBarItem
+                    name={'Profile'}
+                    item={<UserProfileIcon />}
+                />
+            </Link>
+
+        </div >
     );
 };
 

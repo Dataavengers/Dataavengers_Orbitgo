@@ -6,12 +6,12 @@ import { BackIcon, LocationPinIcon } from '../assets/Icons';
 
 const Dashboard = () => {
 
-    const onClickLestGoButton = () => {
-        
+    const onClickLetsGoButton = () => {
+
     }
 
-    const onClickTrunBackButton = () => {
-        
+    const onClickTurnBackButton = () => {
+
     }
 
     return (
@@ -21,26 +21,25 @@ const Dashboard = () => {
                     WELCOME BACK!!!
                 </div>
                 <div className='w-full text-white flex flex-col justify-center items-center ' >
-                    <div 
-                    className='flex absolute top-[21%] left-[50%]'
-                    // className= 'absolute top-[21%] left-[50%]' 
+                    <div
+                        className='flex absolute top-[21%] left-[50%]'
                     >
                         <div className='' >
                             <LocationPinIcon />
                         </div>
                         <div className='text-white font-inter text-[0.75rem] font-medium' >You are here!</div>
                     </div>
-                    <img className='w-full' src={worldImage} alt='world-img'/>
+                    <img className='w-96' src={worldImage} alt='world-img' />
                     <div className='flex justify-end w-full pt-5'>
-                        <button onClick={onClickTrunBackButton} >
+                        <button onClick={onClickTurnBackButton} >
                             <BackIcon />
                         </button>
                     </div>
                 </div>
-                <div className='w-full ' >
-                    <Button 
+                <div>
+                    <Button
                         btnName={'LETS GO!'}
-                        onClickButton={onClickLestGoButton}
+                        onClickButton={onClickLetsGoButton}
                     />
                 </div>
             </div>
