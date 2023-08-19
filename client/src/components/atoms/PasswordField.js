@@ -16,7 +16,7 @@ const PasswordField = ({lable, placeholder, value, setValue, isPasswordHidden, s
             <div className='relative'>
 
             <input 
-                className="border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-blue-300 font-inter font-medium text-xs leading-5 tracking-tighter bg-transparent" 
+                className="border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-blue-300 font-inter font-medium text-lg leading-5 tracking-tighter bg-transparent" 
                 id={lable}
                 type={isPasswordHidden?'password':'text'} 
                 placeholder={placeholder} 

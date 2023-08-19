@@ -6,6 +6,9 @@ import NoMatch from './pages/NoMatch';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import UpdateUsername from './pages/UpdateUsername';
+import UpdateName from './pages/UpdateName';
+import UpdatePassword from './pages/UpdatePassword';
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/updateuser" element={<UpdateUsername />} />
+          <Route path="/updatename" element={<UpdateName />} />
+          <Route path="/updatepass" element={<UpdatePassword />} />
           
           <Route path="*" element={<NoMatch />} />
         </Routes>

@@ -13,7 +13,7 @@ const TextField = ({lable, placeholder, value, setValue, isError, errorMsg}) => 
                 {lable}
             </label>
             <input 
-                className="border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-[#9ccddc] text-opacity-50 font-inter font-medium text-xs leading-5 tracking-tighter bg-transparent" 
+                className="border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-[#9ccddc] text-opacity-50 font-inter font-medium text-lg leading-5 tracking-tighter bg-transparent" 
                 id={lable}
                 type="text" 
                 placeholder={placeholder} 
