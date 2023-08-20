@@ -8,7 +8,7 @@ const Profile = () => {
     return (
         < >
             <div className='place-items-center h-screen w-full flex flex-col justify-between py-5 px-7 bg-gradient-to-b from-[#011118] to-[#133F52]' >
-                <div class=" w-1/2 mt-8 border border-gray-500 rounded-lg shadow">
+                <div class=" w-1/2 mt-8  border-gray-500 rounded-lg shadow">
 
                     <div class="flex flex-col items-center pb-10 ">
 

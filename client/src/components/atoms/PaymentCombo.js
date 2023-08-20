@@ -34,7 +34,7 @@ const PayCombo = ({ lable, placeholder, value, setValue, isError, errorMsg }) =>
                 {lable}
             </label>
             <select
-                className='border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-[#ffffff] text-opacity-70 font-inter font-medium text-lg leading-5 tracking-tighter bg-transparent'
+                className='border border-blue-300 rounded-md p-4 mt-3 w-full py-2.5 px-3 text-[#9ccddc] text-opacity-70 font-inter font-medium text-lg leading-5 tracking-tighter bg-transparent'
                 options={paymentOptions}
                 value={selected}
                 placeholder={placeholder}

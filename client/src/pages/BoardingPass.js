@@ -14,7 +14,7 @@ const BoardingPass = () => {
 
                 <div className='h-full flex flex-col w-full px-10 justify-center items-center'>
 
-                    <div className=' px-7 w-1/3 bg-sky-300 font-semibold p-3 rounded-3xl '>
+                    <div className=' px-7 w-1/3 bg-sky-300 font-semibold py-5 rounded-3xl '>
                         <div className='p-3'> <p>Explorer-class Starfare</p> </div>
                         <div className='p-3 flex flex-row justify-between '>
                             <div >

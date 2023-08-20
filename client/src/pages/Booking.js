@@ -17,7 +17,7 @@ const Booking = () => {
     return (
         < >
             <div className='place-items-center h-screen w-full flex flex-col justify-between py-5 px-7 bg-gradient-to-b from-[#011118] to-[#133F52]' >
-                <div className="flex w-1/2 mt-8 border border-gray-500 rounded-lg shadow p-10 items-center justify-center">
+                <div className="flex w-1/2 mt-8 border-gray-500 rounded-lg shadow p-10 items-center justify-center">
 
                     <form className="w-full  max-w-lg place-items-center justify-between content-center">
                         <div>
