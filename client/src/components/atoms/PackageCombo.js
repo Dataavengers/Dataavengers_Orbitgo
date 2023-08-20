@@ -21,8 +21,11 @@ const PackCombo = ({ lable, placeholder, value, setValue, isError, errorMsg }) =
     const [selected, setSelected] = useState(packageOptions[0].value);
 
     const handleChange = event => {
-        console.log(event.target.value);
         setSelected(event.target.value);
+        console.log(event.target.value);
+        // if (event.target.value == '') {
+        //     console.log("hi")
+        // }
     };
 
     return (

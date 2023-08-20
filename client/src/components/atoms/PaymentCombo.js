@@ -24,8 +24,8 @@ const PayCombo = ({ lable, placeholder, value, setValue, isError, errorMsg }) =>
     const [selected, setSelected] = useState(paymentOptions[0].value);
 
     const handleChange = event => {
-        console.log(event.target.value);
         setSelected(event.target.value);
+        console.log(event.target.value);
     };
 
     return (
