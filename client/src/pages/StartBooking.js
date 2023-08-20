@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import Mars from '../assets/img/mars.png'
 import Saturn from '../assets/img/saturn.png'
 import Moon from '../assets/img/moon.png'
+import Four from '../assets/img/4star.png'
+import Five from '../assets/img/5star.png'
 
 const StartBooking = () => {
 
@@ -28,9 +30,10 @@ const StartBooking = () => {
                             <div >
                                 <img className='' width={100} src={Mars} alt='Mars' />
                             </div>
-                            <div>
+                            <div className=' text-center'>
                                 <p className='text-3xl font-bold'>Mars</p>
-                                <p>Esrautus</p>
+                                <img className='' width={135} src={Four} alt='Mars' />
+
                             </div>
                         </div>
                     </div>
@@ -38,12 +41,13 @@ const StartBooking = () => {
                     <div className=' w-2/3 bg-gray-700 text-white font-semibold p-5  rounded-3xl '>
                         <div className='p-3 flex flex-row justify-between '>
                             <div >
-                                <img className='' width={100} src={Moon} alt='Mars' />
+                                <img className='' width={100} src={Moon} alt='Moon' />
 
                             </div>
-                            <div>
+                            <div className=' text-center'>
                                 <p className='text-3xl font-bold'>Moon</p>
-                                <p>Esrautus</p>
+                                <img className='' width={135} src={Five} alt='Moon' />
+
                             </div>
                         </div>
                     </div>
@@ -51,12 +55,13 @@ const StartBooking = () => {
                     <div className=' w-2/3 bg-gray-700 text-white font-semibold p-5  rounded-3xl '>
                         <div className='p-3 flex flex-row justify-between '>
                             <div >
-                                <img className='' width={100} src={Saturn} alt='Mars' />
+                                <img className='' width={100} src={Saturn} alt='Saturn' />
 
                             </div>
-                            <div>
+                            <div className=' text-center'>
                                 <p className='text-3xl font-bold'>Saturn</p>
-                                <p>Esrautus</p>
+                                <img className='' width={135} src={Four} alt='Saturn' />
+
                             </div>
                         </div>
 
