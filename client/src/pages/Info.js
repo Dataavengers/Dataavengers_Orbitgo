@@ -7,9 +7,9 @@ const Info = () => {
 
     return (
         <div className='place-items-center h-screen w-full flex flex-col justify-between py-5 px-7 bg-gradient-to-b from-[#011118] to-[#133F52] ' >
-            <div className='w-fit flex flex-row pt-20 justify-around place-items-center'>
-                <div >
-                    <img className='w-5/12' src={marsImg} alt='Mars' />
+            <div className='w-fit flex flex-row mt-20 justify-evenly place-items-center'>
+                <div className='w-4/12'>
+                    <img  src={marsImg} alt='Mars' />
                 </div>
                 <div className='text-white text-4xl mr-10'>Mars</div>
             </div>
