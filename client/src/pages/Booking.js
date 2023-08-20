@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import BottomNavBar from '../components/molecules/BottomNavBar';
 import Button from '../components/atoms/Button';
 import TextField from '../components/atoms/TextField';
+import PackCombo from '../components/atoms/PackageCombo';
+import PayCombo from '../components/atoms/PaymentCombo';
 
 const Booking = () => {
 
@@ -40,6 +42,7 @@ const Booking = () => {
 
                             <div className='flex flex-wrap justify-between'>
                                 <TextField
+                                    type={"Date"}
                                     lable={"Date"}
                                     placeholder={"DD/MM/YYYY"}
                                     value={date}
@@ -48,6 +51,7 @@ const Booking = () => {
                                     errorMsg={""}
                                 />
                                 <TextField
+                                    type={"number"}
                                     lable={"No.of Persons"}
                                     placeholder={"00"}
                                     value={persons}
@@ -58,21 +62,17 @@ const Booking = () => {
                             </div>
 
                             <div>
-                                <TextField
-                                    lable={"Select Package"}
-                                    placeholder={""}
+
+                                <PackCombo
+                                    placeholder={"Choose"}
+                                    lable={"Select package"}
                                     value={pack}
                                     setValue={setPack}
-                                    isError={false}
-                                    errorMsg={""}
-
-                                /><TextField
+                                />
+                                <PayCombo
                                     lable={"Select payment method"}
-                                    placeholder={""}
                                     value={payMethod}
                                     setValue={setPayMethod}
-                                    isError={false}
-                                    errorMsg={""}
                                 />
                             </div>
                             <div>
