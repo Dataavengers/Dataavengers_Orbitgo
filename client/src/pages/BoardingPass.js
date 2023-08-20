@@ -1,5 +1,6 @@
 import React from 'react';
 import BottomNavBar from '../components/molecules/BottomNavBar';
+import Barcode from '../assets/img/barcode.png'
 
 
 const BoardingPass = () => {
@@ -13,7 +14,7 @@ const BoardingPass = () => {
 
                 <div className='h-full flex flex-col w-full px-10 justify-center items-center'>
 
-                    <div className='w-1/3 bg-sky-300 font-semibold p-5 rounded-3xl '>
+                    <div className=' px-7 w-1/3 bg-sky-300 font-semibold p-3 rounded-3xl '>
                         <div className='p-3'> <p>Explorer-class Starfare</p> </div>
                         <div className='p-3 flex flex-row justify-between '>
                             <div >
@@ -33,6 +34,15 @@ const BoardingPass = () => {
                             <div>
                                 <p>05.00 PM</p>
                                 <p>Wed, 3 July</p>
+                            </div>
+                        </div>
+
+                        <div className='p-3 flex flex-row justify-center border  m-auto border-black rounded-lg'>
+                            <div className='flex-col p-2'>
+                                <p>Boarding Pass</p>
+                                <div  >
+                                    <img src={Barcode} alt='barcode' width='w-full' />
+                                </div>
                             </div>
                         </div>
                     </div>

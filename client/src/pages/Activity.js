@@ -36,7 +36,7 @@ const Activity = () => {
                             </div>
                         </div>
 
-                        <div className='p-3 flex flex-row justify-between border rounded-lg'>
+                        <div className='p-3 flex flex-row justify-between border border-black rounded-lg'>
                             <div >
                                 <p>Boarding Pass</p>
                                 <img src={Barcode} alt='barcode' width='w-full' />
@@ -66,7 +66,7 @@ const Activity = () => {
                                 <p>Wed, 3 July</p>
                             </div>
                         </div>
-                        <div className='p-3 flex flex-row justify-between border rounded-lg'>
+                        <div className='p-3 flex flex-row justify-between border border-black rounded-lg'>
                             <div >
                                 <p>Boarding Pass</p>
                                 <img src={Barcode} alt='barcode' width='w-full' />
@@ -96,7 +96,7 @@ const Activity = () => {
                                 <p>Wed, 3 July</p>
                             </div>
                         </div>
-                        <div className='p-3 flex flex-row justify-between border rounded-lg'>
+                        <div className='p-3 flex flex-row justify-between border border-black rounded-lg'>
                             <div >
                                 <p>Boarding Pass</p>
                                 <img src={Barcode} alt='barcode' width='w-full' />
